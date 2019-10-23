@@ -4,14 +4,14 @@ import App from './App';
 import { createStore, cokmbineReducers, combineReducers } from 'redux'
 import {Provider} from "react-redux"
 import {reducer as addReducer } from "./reducers/addFeature"
-import {reducer as removeReducer } from "./reducers/removeFeature"
-import reducer from './reducers/addFeature'
+
+
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
 const rootReducer = combineReducers({
- add: addReducer,
- remove: removeReducer
+ add: addReducer
+//
 })
 
 const store = createStore(rootReducer)
