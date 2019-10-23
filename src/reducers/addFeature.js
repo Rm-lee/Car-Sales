@@ -19,12 +19,20 @@ const initialState = {
 export function reducer(state = initialState, action) {
  switch(action.type){
   case ADD_TO_CAR:
-   console.log("added to car features")
+   const newFeature = state.additionalFeatures.filter(feat => 
+     feat.id === action.payload
+   )
+   console.log(state.car.features)
    return{
-    ...state
+    ...state,
+    car:{  ...state.car,
+     features: 
+      state.car.features.concat(newFeature)
     
     
-   }
+    }
+    
+   } 
    default:
      return state;
  }

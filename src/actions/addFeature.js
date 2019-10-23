@@ -2,8 +2,9 @@
 
 export const ADD_TO_CAR = "ADD_TO_CAR"
 
-export function addToCar(){
+export function addToCar(item){
  return {
-  type: ADD_TO_CAR
+  type: ADD_TO_CAR,
+  payload: item
  }
 }
